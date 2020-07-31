@@ -8,10 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: install npm
-      uses: actions/npm@master
+    - name: install node
+      uses: actions/setup-node@v2-beta
       with:
-        args: install
+        node-version: '12'
     
     - name: setup go
       uses: actions/setup-go@v1
