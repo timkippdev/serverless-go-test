@@ -5,26 +5,26 @@ on:
     branches: [ master ]
 
 jobs:
-  name: deploy
-  runs-on: ubuntu-latest
-  steps:
-  - name: install npm
-    uses: actions/npm@master
-    with:
-      args: install
-  
-  - name: setup go
-    uses: actions/setup-go@v1
-    with:
-      go-version: 1.14
-  
-  - name: checkout source code
-    uses: actions/checkout@master
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install npm
+      uses: actions/npm@master
+      with:
+        args: install
+    
+    - name: setup go
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.14
+    
+    - name: checkout source code
+      uses: actions/checkout@master
 
-  - name: build
-    run: make clean build
+    - name: build
+      run: make clean build
 
-  - name: deploy
-    uses: serverless/github-action@master
-    with:
-      args: deploy
+    - name: deploy
+      uses: serverless/github-action@master
+      with:
+        args: deploy
