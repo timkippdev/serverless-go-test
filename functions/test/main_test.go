@@ -6,5 +6,4 @@ import (
 
 func Test(t *testing.T) {
 	t.Log("Log from a test!")
-	t.Error("Simulating a test failure")
 }

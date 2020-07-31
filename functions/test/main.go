@@ -22,7 +22,7 @@ func Handler(ctx context.Context) (Response, error) {
 	var buf bytes.Buffer
 
 	body, err := json.Marshal(map[string]interface{}{
-		"message": fmt.Sprintf("Success | Env: %s", os.Getenv("env")),
+		"message": fmt.Sprintf("Success!! | Env: %s", os.Getenv("env")),
 	})
 	if err != nil {
 		return Response{StatusCode: 404}, err
