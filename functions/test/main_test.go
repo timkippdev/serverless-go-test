@@ -1,10 +1,10 @@
 package main_test
 
 import (
-	"fmt"
 	"testing"
 )
 
 func Test(t *testing.T) {
-	fmt.Println("Test has been run!")
+	t.Log("Log from a test!")
+	t.Fail("Simulate a test failure")
 }
