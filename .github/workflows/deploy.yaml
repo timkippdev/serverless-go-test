@@ -7,12 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-    # - name: install node
-    #   uses: actions/setup-node@v2-beta
-    #   with:
-    #     node-version: '12'
-    
+    steps:    
     - name: setup go
       uses: actions/setup-go@v1
       with:
